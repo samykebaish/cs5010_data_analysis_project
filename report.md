@@ -1,7 +1,7 @@
 # CS 5010 Semester Project: Mental Health
 
 Kelly Farell - knf7vg@virginia.edu
-Samy Kebaish - sak3qf@virginia.edu
+Samy Kebaish - sak3qf@virginia.edu  
 Gretchen Larrick - jem37b@virginia.edu
 
 ## Introduction
