@@ -1,7 +1,7 @@
 # CS 5010 Semester Project: Mental Health
 
 Kelly Farell - knf7vg@virginia.edu
-Samy Kebaish - sak3qf@virginia.edu  
+Samy Kebaish - sak3qf@virginia.edu
 Gretchen Larrick - jem37b@virginia.edu
 
 ## Introduction
@@ -11,10 +11,12 @@ Mental health impacts everyone on an individual level, but it can be hard to vis
 Our primary datasets include Adult and Child Health Care Quality Measures for fiscal year 2018. Each year, the Centers for Medicare and Medicaid Services (CMS) collects benchmark data from a variety of treatment providers, with the goal of summarizing the quality of care received by adult Medicaid recipients and CHIP beneficieries.  We also used the Mental Health Client-Level Data (MH-CLD) from SAHMSA (Substance Abuse and Mental Health Services Administration, a part of the US Department of Health and Human Services). We primarily focused on the year 2018, but trend analyses included data from 2013-2018. For some supplemental information regarding poverty by state, we utilized the Kaiser Family Foundation's State Facts database summarizing poverty rate by race and ethnicity, and geoJson files containing location coordinates for US state boundaries (Story and Fernandez, 2016), and state abbreviation/FIPS (World Population Review (n.d.)) to generate choropleths and merge datasets which utilized different encoding methods for state.
 
 ### Adult and Child Health Care Quality Measures
-
+The Social Security Act enacted by the federal government requires that an annual report of predefined core measures of healthcare quality for adult Medicaid enrollees. Based on data from electronic health records and reports from treatment centers which accept Medicaid and CHIP, this dataset contains state-level performance rates for many aspects of health, including behavioral healthcare, prenatal and pregnancy-related healthcare, and early childhood care. Reporting rates vary considerably across measures--newly defined or updated measures often have lower participation rates due to the state-level infrastructure needed to provide the 
 
 ### MH-CLD
 The Mental Health Client-Level Data contain demographic, diagnoses, and treatment setting and outcome for individuals receiving services through their state mental health agency. The analyses and modeling relied on variables such as education, race, ethnicity, age, gender, primary, secondary, and tertiary mental health diagnoses, and indicators of diagnosis in a variety of illness categories (such as depressive disorders or personality disorders).
+
+These data are somewhat limited--although the year was reported, months and days were excluded. These details would provide supplemental benefit due to the seasonality of depression. For example, in a study by Ayers et al. in 2013, Google mental health queries monitored from 2006 to 2010 revealed seasonal patterns for all mental health queries, with winter peaks and summer troughs (14% difference in the United States; 11% difference for Australia).
 
 ### KFF Datasets
 Based on US Census surveys, the Kaiser Family Foundation estimated the rate of people living at or under the federal poverty line for the year 2018 and grouped that data by state, race, and ethnicity.
@@ -95,6 +97,8 @@ Minority oversampling and future linear analyses
 Other variables that could contribute
 
 ## Works Cited
+Ayers, J. W., Althouse, B. M., Allem, J. P., Rosenquist, J. N., & Ford, D. E. (2013). Seasonality in seeking mental health information on Google. _American journal of preventive medicine_, 44(5), 520-525. https://www.sciencedirect.com/science/article/abs/pii/S0749379713000809
+
 Bedre, R. (2021). "Performing and visualizing the Principal component analysis (PCA) from PCA function and scratch in Python". _Renesh Bedre Data Science Blog_. https://www.reneshbedre.com/blog/principal-component-analysis.html
 
 Bokeh Development Team (2021). Bokeh: Python library for interactive visualization. https://bokeh.org
