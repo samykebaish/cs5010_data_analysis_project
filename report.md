@@ -12,8 +12,9 @@ Our primary datasets include Adult and Child Health Care Quality Measures for fi
 
 ### Adult and Child Health Care Quality Measures
 
-### MH-CLD
 
+### MH-CLD
+The Mental Health Client-Level Data contain demographic, diagnoses, and treatment setting and outcome for individuals receiving services through their state mental health agency. The analyses and modeling relied on variables such as education, race, ethnicity, age, gender, primary, secondary, and tertiary mental health diagnoses, and indicators of diagnosis in a variety of illness categories (such as depressive disorders or personality disorders).
 
 ### KFF Datasets
 Based on US Census surveys, the Kaiser Family Foundation estimated the rate of people living at or under the federal poverty line for the year 2018 and grouped that data by state, race, and ethnicity.
