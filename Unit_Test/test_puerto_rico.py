@@ -1,7 +1,15 @@
 import unittest
 import pandas as pd
 from pandas._testing import assert_frame_equal
-from remove_puerto_rico import remove_puerto_rico
+
+
+#Function in the jupyter notebook that is being tested
+#this is tested inside the notebook for better accuracy, in this file due to 
+#project requirements. 
+def remove_puerto_rico(df):
+    df = df[df['STATEFIP'] != 72]
+    df = df.reset_index(drop=True)
+    return df
 
 class PuertoRicoTestCase(unittest.TestCase): # inherit from unittest.TestCase
     
