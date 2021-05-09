@@ -75,21 +75,25 @@ The next part of the exploratory analysis was to sort through the guidebook prov
 The first to explore is age. The variable is not an integer age, but a range of ages. The first goal is to get a visualization of each age group‘s total count, figure 3. This shows that the 0-11 age group has a significant number of higher cases than the other age groups.
 
 ![Figure 3](agetotals.png)
+
 **Figure 3:  Age Group Totals**
 
 With the dataset broken down into states, the data is then group into age groups by state, figure 4. Again, the 0-11 age range has the highest number of cases in a majority of the states.
 
 ![Figure 4](agebystate.png)
+
 **Figure 4:  Age Group Totals by State**
 
 The same analysis was completed on the mental health diagnosis variable. The totals for each mental health diagnosis are shown in figure 5. Depression has the highest number of cases in this dataset.
 
 ![Figure 5](mh1total.png)
+
 **Figure 5:  Mental Health Diagnosis Totals**
 
 The variable is then broken down by state, figure 6, and the conclusion of which mental health diagnosis is the highest isn’t as clear as with the age analysis. The breakdown of the state mental health diagnosis is much more varied.
 
 ![Figure 6](mh1state.png)
+
 **Figure 6:  Mental Health Diagnosis Totals by State**
 
 
@@ -98,7 +102,7 @@ The variable is then broken down by state, figure 6, and the conclusion of which
 After looking at age and mental health diagnosis separately, how do these two variables relate to each other? In figure 7, age ranges are grouped by their mental health diagnosis. From this, it is seen that the depressive mental health diagnosis is prominent in most of the age groups, with a higher instance after an individual is over the age of 15.
 
 ![Figure 7](agemh1multi.png)
-Figure 7:  Age groups by Mental Health Diagnosis
+**Figure 7:  Age groups by Mental Health Diagnosis**
 
 There is a difference in diagnoses for individuals who are over 18 in relation to individuals under the age of 18. Individuals under the age of 18 have a much higher number of cases in the ADD/ADHD, Trauma/Stressors, and Oppositional Defiant Disorders categories. After the age of 18, there is an increase in depression, but it varies in the over 18 age groups, but each group remains higher individually than the under 18 age groups.
 
@@ -122,9 +126,12 @@ While follow-up visits with outpatient treatment providers are more likely to oc
 
 ### Principal Component Analysis
 A Principal Component Analysis was used to evaluate all variables in the combined CLD-Health Care Quality Measures dataset.
-![fig5.png](assets/markdown-img-paste-20210508161115359.png)
+![fig9.png](assets/markdown-img-paste-20210508161115359.png)
 
-![fig2.png](assets/markdown-img-paste-20210508160144910.png)
+**Figure 9. PCA CLD Health Care Quality Measures
+
+![fig10.png](assets/markdown-img-paste-20210508160144910.png)
+
 ### Logistic Regression
 ![fig3.png](assets/markdown-img-paste-20210508160836455.png)
 ![fig4.png](assets/markdown-img-paste-20210508160938792.png)
