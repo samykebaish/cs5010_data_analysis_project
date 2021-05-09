@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>Please enter numeric values below to test the KNN Classifier</head>
+<div class="content">
+			{% if prediction is defined %}
+                Year: {{ sepal_length }}<br>
+                Age: {{ sepal_width }}<br>
+                Education: {{ petal_length }}<br>
+                Ethnicity: {{ petal_width }}<br>
+                <br>
+                Is a {{ prediction }}.
+			{% else %}
+				Please fill out the form below!
+			{% endif %}
+	</div>
+
+	{% block page_content %}
+	<div class="content">
+		<form method="POST">
+
+			{{ form.param1.label }} {{ form.param1() }}
+			<br>
+			{{ form.param2.label }} {{ form.param2() }}
+			<br>
+			{{ form.param3.label }} {{ form.param3() }}
+			<br>
+			{{ form.param4.label }} {{ form.param4() }}
+			<br>
+			<br>
+			{{ form.submit() }}
+		</form>
+	</div>
+
+
+{% endblock %}
