@@ -129,16 +129,11 @@ Since the proportion of states providing data for the follow-up measure after em
 ## General Linearized Model
 
 ### Principal Component Analysis
-<<<<<<< HEAD
-A Principal Component Analysis was used to evaluate all variables in the combined CLD-Health Care Quality Measures dataset. First, the numeric data was scaled using a standard scaler, to prevent biased scores that result from having different measurement units for numeric variables. The data were split into training and testing 
-![fig5.png](assets/markdown-img-paste-20210508161115359.png)
-=======
 A Principal Component Analysis was used to evaluate all variables in the combined CLD-Health Care Quality Measures dataset.
 ![fig9.png](assets/markdown-img-paste-20210508161115359.png)
 
 ![fig10.png](assets/markdown-img-paste-20210508160144910.png)
 **Figure 9. PCA CLD Health Care Quality Measures**
->>>>>>> 9531a29ea73a331d44c0515f7738c8197f660b58
 
 ### Logistic Regression
 ![fig3.png](assets/markdown-img-paste-20210508160836455.png)
@@ -148,17 +143,11 @@ A Principal Component Analysis was used to evaluate all variables in the combine
 ## Trend Analysis
 As data has been garnered since the year 2013 in a consistent fashion, we decided to conduct analyses on whether mental illness incidence has been increasing. To our surprise, the rates of mental illness have been fairly consistent throughout the years, and the diagnostic comparison between males and females followed a similar trend line amongst both groups. Moreover, disease distribution was also demonstrated to be consistent among years. For example, see Figure X for the distribution of mental health illnesses in 2016 as compared to 2018. However, in future studies, more extensive analysis is warranted. Namely, in our analysis, we did a deep dive into the dataset related to 2018. In order to present a truly robust representation, a similar level of depth would be necessary for each year (from 2013 onwards), which then can make comparisons more meaningful.
 ![2016_2018_histograms.png](assets/2016_2018_histograms.png)
-
-**Figure 11. Mental Health Histogram: 2016 vs. 2018**
-
 ## Above and Beyond: Advanced ML Methods and Interactive Website
 As part of our advanced analysis, we investigated the potential usage of machine learning algorithms towards uncovering trends related to various features and labels of our dataset. The labels we used included a mix of demographic, whereas the labels were based on multiple disorder diagnoses (Table X). The range of values for the labels and features were either binary (0 or 1), polyadic (e.g. -9, 1, 2, 3, 4) and continuous (0-100). Some of the features includes were age, education, ethnicity, race, substance abuse history, marital status, veteran status etc. The labels investigated included multiple disorders - such as major depressive disorder, ADHD, anxiety, schizophrenia - which were coded 0 for absence and 1 for presence thereof. Based on the structure of the data, we evaluated three separate machine learning models: Naive Bayes, K-Nearest Neighbors and a multilabel classification model using ADAM optimization. The NB and KNN classifiers were conducted using the scikit-learn library, whereas the multilabel classification model was derived from the keras library.
 ### Naive Bayes
 The three models differed in their properties and use cases. In the case of Naive Bayes (NB), as the name suggests, Naive bayes utilizes Bayes theorem (that the probability of an event can be based on prior knowledge of conditions which may have a relation to the event) in conjunction with the “naive” assumption that the attributes are conditional independent. As a supervised learning technique, Naive Bayes is considered to be a decent classifier, extremely fast compared to sophisticated methods, but a bad estimator, particularly as datasets become more complex. There are multiple types of naive bayes, including Gaussian (Figure X), Multinomial, Complement, Bernoulli, Categorical, and “Out-of-core” Naive Bayes model fitting. The Naive Bayes algorithm utilized in this case was GaussianNB. Unlike the KNN and Multilabel classifier (discussed in subsequent paragraphs), the Naive Bayes classifier could handle multiple features, but was limited to a single label output. Accordingly, our implementation meant that, in order to evaluate multiple labels, each one would need to be done individually, and the others followed in iterative O(n) fashion.
 ![gaussian_nb.png](assets/gaussian_nb.png)
-
-**Figure 12. Naive Bayes Equation**
-
 ### k-Nearest Neighbors & Multilabel Classification Optimization
 K Nearest Neighbors is an algorithm which assumes that similar data points are close to or “neighbor” one another. It can be used to solve classification and regression problems. We used a KNN classifier due to its ability to handle multi feature, multilabel data. Additional, we use keras for similar, albeit more robust, multifeature, multilabel classification. Keras is an intuitive deep learning API which acts as an interface for the Tensorflow Library. We implemented a Multilabel Classification using the ADAM optimization algorithm. The Adam optimization algorithm is used, as opposed to stochastic gradient descent, which stands for Adaptive Moment Estimation. Unlike stochastic gradients, which use single learning rates, the Adam algorithm implements both Adaptive Gradient Algorithm and Root Mean Square Propagation. These two mechanisms calculate an exponential moving average of the gradient and the squared gradient. As an example, we ran a Keras multi label classification model implementing initially 8 demographic variables (features) and 10 mental health diagnoses (labels) for the following representation: A 40-44 year old, High School Educated, Hispanic (other than Mexico or Puerto Rico), White in Ethnicity, Female, from California, who is divorced. The initial accuracy was only 36%, demonstrating the low impact of demographic variables in ascertaining mental health (for this dataset). However, after adding information about veteran status, substance abuse, homelessness, admissions to hospital and other clinical features (18 total), the maximum accuracy was 76.2%. Ultimately, accuracy scores were similar for KNN and multilabel classification, although multilabel classification had a lower sensitivity.
 ![keras.png](assets/keras.png)
@@ -168,12 +157,9 @@ K Nearest Neighbors is an algorithm which assumes that similar data points are c
 The findings from the machine learning model revealed intuitive trends behind the modeling output. Specifically, as the number of features was increased, there was also an increase in the accuracy of the output. Furthermore, demographic variables being added, such as age, race and sex, had a lesser effect on diagnosing as compared to variables such as substance abuse history, hospital admission, psychiatric ward admissions, and . Of the models, Naive Bayes had the highest accuracy but this was to be expected as it was measuring a single label. In using four features for a single label, NB had an accuracy of around 90% compared to 35% for KNN. Comparatively, K-nearest neighbors and the multilabel classifier had lower accuracy scores, but could handle much more complex labels. This is important depending on the use case. If you want to determine if a patient has a particular diagnosis, then NB is a better classifer. However, if you are interested in determining if a patient has multiple diagnoses, this is a more complicated affair, as some disorders may be comorbid with others. Accordingly, KNN and multilabel classifiers are ideal in those cases.
 
 ### Interactive Web Application
-
-
+![website_sample](assets/website_sample.png)
 
 A website complete with user-interactive visualizations was created to encourage engagement with the datasets and analyses. The choropleths show the raw percentages for the Health Care Quality measure performance of a given state when the user hovers their mouse over it. The interactive web-based application was built in Flask. Flask is a Python web framework which implements the Jinja template engine to serve HTML files and the Wekzeug WGSI toolkit. We used three data visualization libraries as samples on this website, including seaborn, plotly express (to generate choropleth maps) and bokeh. Regarding the latter, we imported historical data from the years of 2013-2018 to determine the frequency of primary, secondary and tertiary diagnoses over the years. Users could select the year from the dropdown menu, prompting the redraw function to create a plot based on the attributes.
-![website_sample](assets/website_sample.png)
-**Figure 13. Interactive Web Application Sample**
 
 ## Unit Testing
 ### MLH - CLD Dataset
@@ -181,21 +167,16 @@ A website complete with user-interactive visualizations was created to encourage
 The unit testing for this dataset was of a function that was written to remove Puerto Rico from the dataset. Below is a picture of the results. A data frame with and without Puerto Rico was created and tested using the function to remove Puerto Rico.
 
 ![Unit Test](MLH-CD_Unit_Test.png)
-**Figure 14. Unit Test Sample 1**
 
 Moreover, when using a NB classifier, the parameter sizes must be very precise in order for the model to run properly. Here, we check the feature and labels to ensure they are of the proper dimensions. We also check if accuracy is above the 80% threshold.
 ![testing_sample.png](assets/testing_sample.png)
-**Figure 15. Unit Test Sample 2**
+
 
 ## Conclusions
 
 ### MLH - CLD Dataset Investigation
 
-<<<<<<< HEAD
-Using age and mental health diagnosis to explore the mental health dataset allowed us to gain an understanding of who is receiving treatment and which diagnosis is the most prevalent. The age group 0-11 years had the highest number of cases overall and with most of the states. Most of these cases were in the ADD/ADHD and Trauma/Stressor category.  As the age increased, the diagnosis with the higher number of cases changed over to depression  To increase the understanding and awareness of mental health, adding more variables into the data set and looking more at how socioeconomic conditions impact the type of diagnosis received. In terms of machine learning models, additional testing can be conducted, such as investigating precision and recall scores.
-=======
 Using age and mental health diagnosis to explore the mental health dataset allowed us to gain an understanding of who is receiving treatment and which diagnosis is the most prevalent. The age group 0-11 years had the highest number of cases overall and with most of the states. Most of these cases were in the ADD/ADHD and Trauma/Stressor category.  As the age increased, the diagnosis with the higher number of cases changed over to depression  To increase the understanding and awareness of mental health, adding more variables into the data set and looking more at how socioeconomic conditions impact the type of diagnosis received. In terms of machine learning models, additional testing can be conducted, such as investigating precision and recall scores. Moreover, investigation into optimizing model parameters is warranted, such as number of features and identity of features, number of neighbors for KNN, number of epochs and layers for the keras multilabel classification model, in addition to researching other models.
->>>>>>> 9531a29ea73a331d44c0515f7738c8197f660b58
 
 ## Future Research Opportunities
 Will trends change over the next few years due to covid-19?
