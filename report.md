@@ -149,7 +149,7 @@ The unit testing for this dataset was of a function that was written to remove P
 ![Unit Test](MLH-CD_Unit_Test.png)
 
 Moreover, when using a NB classifier, the parameter sizes must be very precise in order for the model to run properly. Here, we check the feature and labels to ensure they are of the proper dimensions. We also check if accuracy is above the 80% threshold. 
-![testing_sample.png](testing_sample.png)
+![testing_sample.png](assets/testing_sample.png)
 
 
 ## Conclusions
