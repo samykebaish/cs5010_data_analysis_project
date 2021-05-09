@@ -15,7 +15,7 @@ Mental health impacts everyone on an individual level, but it can be hard to vis
 Our primary datasets include Adult and Child Health Care Quality Measures for fiscal year 2018. Each year, the Centers for Medicare and Medicaid Services (CMS) collects benchmark data from a variety of treatment providers, with the goal of summarizing the quality of care received by adult Medicaid recipients and CHIP beneficieries.  We also used the Mental Health Client-Level Data (MH-CLD) from SAHMSA (Substance Abuse and Mental Health Services Administration, a part of the US Department of Health and Human Services). We primarily focused on the year 2018, but trend analyses included data from 2013-2018. For some supplemental information regarding poverty by state, we utilized the Kaiser Family Foundation's State Facts database summarizing poverty rate by race and ethnicity, and geoJson files containing location coordinates for US state boundaries (Story and Fernandez, 2016), and state abbreviation/FIPS (World Population Review (n.d.)) to generate choropleths and merge datasets which utilized different encoding methods for state.
 
 ![Dimensions](assets/markdown-img-paste-20210508195455393.png)
-Table 1: Dimensions of the primary datasets used in analysis and modeling mental health and treatment in the United States.
+**Table 1: Dimensions of the primary datasets used in analysis and modeling mental health and treatment in the United States.**
 
 ### Adult and Child Health Care Quality Measures
 The Social Security Act enacted by the federal government requires that an annual report of predefined core measures of healthcare quality for adult Medicaid enrollees. Based on data from electronic health records and reports from treatment centers which accept Medicaid and CHIP, this dataset contains state-level performance rates for many aspects of health, including behavioral healthcare, prenatal and pregnancy-related healthcare, and early childhood care. Reporting rates vary considerably across measures--newly defined or updated measures often have lower participation rates due to the required changes that must be made to a state's health department infrastructure necessary to support the changes to research methodology.
@@ -43,6 +43,7 @@ Plots related to the logistic regression and advanced ML modeling were created u
 Code for modeling was primarily written using Scikit (Pedregosa et al., 2011), Keras (Chollet et al., 2015), and _Flask (Grinberg, 2018). The website was hosted by AWS.
 
 ![tech_stack.png](assets/tech_stack.png)
+**Figure 1. Tech Stack: Front End and Back End Architecture**
 
 ## Preprocessing
 The datasets were carefully cleaned by the governmental and nongovernmental research agencies prior to publishing, so little preprocessing was required. However, null/missing values needed to be accounted for and the datasets needed to be merged together for some of the analyses.
@@ -63,40 +64,45 @@ With the data cleaned, relevant descriptive statistics and other trends could be
 ### MH-CLD
 #### Single Variable Analysis
 
-The MH-CLD data set consists of a large number of categorical variables corresponding to a specific state.  To understand the data, the first object was the look at the total number of entries per state, Figure X.
+The MH-CLD data set consists of a large number of categorical variables corresponding to a specific state.  To understand the data, the first object was the look at the total number of entries per state, Figure 2.
 
-![Figure X](totalstates.png)
-Figure X:  Mental Health Cases per State
+![Figure 2](totalstates.png)
+
+**Figure 2:  Mental Health Cases per State**
 
 The next part of the exploratory analysis was to sort through the guidebook provided by  SAMHA detailing the breakdown of the variables in the dataset. Age and mental health diagnosis have a high number of populated categories so these were the main areas of focus.
 
-The first to explore is age. The variable is not an integer age, but a range of ages. The first goal is to get a visualization of each age group‘s total count, figure y. This shows that the 0-11 age group has a significant number of higher cases than the other age groups.
+The first to explore is age. The variable is not an integer age, but a range of ages. The first goal is to get a visualization of each age group‘s total count, figure 3. This shows that the 0-11 age group has a significant number of higher cases than the other age groups.
 
-![Figure y](agetotals.png)
-Figure Y:  Age Group Totals
+![Figure 3](agetotals.png)
 
-With the dataset broken down into states, the data is then group into age groups by state, figure y. Again, the 0-11 age range has the highest number of cases in a majority of the states.
+**Figure 3:  Age Group Totals**
 
-![Figure z](agebystate.png)
-Figure Z:  Age Group Totals by State
+With the dataset broken down into states, the data is then group into age groups by state, figure 4. Again, the 0-11 age range has the highest number of cases in a majority of the states.
 
-The same analysis was completed on the mental health diagnosis variable. The totals for each mental health diagnosis are shown in figure a. Depression has the highest number of cases in this dataset.
+![Figure 4](agebystate.png)
 
-![Figure a](mh1total.png)
-Figure A:  Mental Health Diagnosis Totals
+**Figure 4:  Age Group Totals by State**
 
-The variable is then broken down by state, figure z, and the conclusion of which mental health diagnosis is the highest isn’t as clear as with the age analysis. The breakdown of the state mental health diagnosis is much more varied.
+The same analysis was completed on the mental health diagnosis variable. The totals for each mental health diagnosis are shown in figure 5. Depression has the highest number of cases in this dataset.
 
-![Figure b](mh1state.png)
-Figure B:  Mental Health Diagnosis Totals by State
+![Figure 5](mh1total.png)
+
+**Figure 5:  Mental Health Diagnosis Totals**
+
+The variable is then broken down by state, figure 6, and the conclusion of which mental health diagnosis is the highest isn’t as clear as with the age analysis. The breakdown of the state mental health diagnosis is much more varied.
+
+![Figure 6](mh1state.png)
+
+**Figure 6:  Mental Health Diagnosis Totals by State**
 
 
 #### Multivariable Analysis
 
-After looking at age and mental health diagnosis separately, how do these two variables relate to each other? In figure c, age ranges are grouped by their mental health diagnosis. From this, it is seen that the depressive mental health diagnosis is prominent in most of the age groups, with a higher instance after an individual is over the age of 15.
+After looking at age and mental health diagnosis separately, how do these two variables relate to each other? In figure 7, age ranges are grouped by their mental health diagnosis. From this, it is seen that the depressive mental health diagnosis is prominent in most of the age groups, with a higher instance after an individual is over the age of 15.
 
-![Figure b](agemh1multi.png)
-Figure B:  Age groups by Mental Health Diagnosis
+![Figure 7](agemh1multi.png)
+**Figure 7:  Age groups by Mental Health Diagnosis**
 
 There is a difference in diagnoses for individuals who are over 18 in relation to individuals under the age of 18. Individuals under the age of 18 have a much higher number of cases in the ADD/ADHD, Trauma/Stressors, and Oppositional Defiant Disorders categories. After the age of 18, there is an increase in depression, but it varies in the over 18 age groups, but each group remains higher individually than the under 18 age groups.
 
@@ -108,13 +114,13 @@ Overall, the measures using the adult population had a higher percentage of nonm
 We chose to analyze follow-up visit information--specifically, outpatient follow-up appointments provided within 30 days after discharge from a hospitalization for mental illness. In order to be hospitalized for mental illness, a person needs to be evaluated by medical professionals (most commonly at an emergency department) and determined to be at an acute risk of harm to themselves or others. This indicates a lot of distress and impact on an individual's life, so outpatient care is needed to help support them as they return to daily life. This variable was chosen because it is one of the few measurements that can apply to any individual who is hospitalized--it is not specific to any diagnosis. We also looked at outpatient follow-up appointments provided within 30 days after an emergency room visit (which did not result in a hospitalization).
 
 ![image replacement text.png](assets/markdown-img-paste-20210508154159182.png)
-Figure 1: National Average Performance on Health Care Quality Measure (child population - right, adult population - left)
+**Figure 8: National Average Performance on Health Care Quality Measure (child population - right, adult population - left)**
 
 ![choropleth2](assets/markdown-img-paste-20210508162358255.png)
-Choroleth 1: The percentage of adults who received a follow-up visit with an outpatient treatment provider after discharge from hospitalization for mental illness, by US state
+**Choroleth 1: The percentage of adults who received a follow-up visit with an outpatient treatment provider after discharge from hospitalization for mental illness, by US state**
 
 ![choropleth1](assets/markdown-img-paste-20210508162327861.png)
-Choropleth 2: The percentage of adults who received a follow-up visit with an outpatient treatment provider after an emergency room visit for mental illness, by US state
+**Choropleth 2: The percentage of adults who received a follow-up visit with an outpatient treatment provider after an emergency room visit for mental illness, by US state**
 
 While follow-up visits with outpatient treatment providers are more likely to occur when a patient is discharging from the hospital, rather than after being screened out in the emergency room, states' performance on this measure had a range of about 35% to 80%.
 
@@ -123,13 +129,22 @@ Since the proportion of states providing data for the follow-up measure after em
 ## General Linearized Model
 
 ### Principal Component Analysis
+<<<<<<< HEAD
 A Principal Component Analysis was used to evaluate all variables in the combined CLD-Health Care Quality Measures dataset. First, the numeric data was scaled using a standard scaler, to prevent biased scores that result from having different measurement units for numeric variables. The data were split into training and testing 
 ![fig5.png](assets/markdown-img-paste-20210508161115359.png)
+=======
+A Principal Component Analysis was used to evaluate all variables in the combined CLD-Health Care Quality Measures dataset.
+![fig9.png](assets/markdown-img-paste-20210508161115359.png)
 
-![fig2.png](assets/markdown-img-paste-20210508160144910.png)
+![fig10.png](assets/markdown-img-paste-20210508160144910.png)
+**Figure 9. PCA CLD Health Care Quality Measures**
+>>>>>>> 9531a29ea73a331d44c0515f7738c8197f660b58
+
 ### Logistic Regression
 ![fig3.png](assets/markdown-img-paste-20210508160836455.png)
 ![fig4.png](assets/markdown-img-paste-20210508160938792.png)
+**Figure 10. Logistic Regression Analysis**
+
 ## Trend Analysis
 As data has been garnered since the year 2013 in a consistent fashion, we decided to conduct analyses on whether mental illness incidence has been increasing. To our surprise, the rates of mental illness have been fairly consistent throughout the years, and the diagnostic comparison between males and females followed a similar trend line amongst both groups. Moreover, disease distribution was also demonstrated to be consistent among years. For example, see Figure X for the distribution of mental health illnesses in 2016 as compared to 2018. However, in future studies, more extensive analysis is warranted. Namely, in our analysis, we did a deep dive into the dataset related to 2018. In order to present a truly robust representation, a similar level of depth would be necessary for each year (from 2013 onwards), which then can make comparisons more meaningful.
 ![2016_2018_histograms.png](assets/2016_2018_histograms.png)
@@ -166,7 +181,11 @@ Moreover, when using a NB classifier, the parameter sizes must be very precise i
 
 ### MLH - CLD Dataset Investigation
 
+<<<<<<< HEAD
 Using age and mental health diagnosis to explore the mental health dataset allowed us to gain an understanding of who is receiving treatment and which diagnosis is the most prevalent. The age group 0-11 years had the highest number of cases overall and with most of the states. Most of these cases were in the ADD/ADHD and Trauma/Stressor category.  As the age increased, the diagnosis with the higher number of cases changed over to depression  To increase the understanding and awareness of mental health, adding more variables into the data set and looking more at how socioeconomic conditions impact the type of diagnosis received. In terms of machine learning models, additional testing can be conducted, such as investigating precision and recall scores.
+=======
+Using age and mental health diagnosis to explore the mental health dataset allowed us to gain an understanding of who is receiving treatment and which diagnosis is the most prevalent. The age group 0-11 years had the highest number of cases overall and with most of the states. Most of these cases were in the ADD/ADHD and Trauma/Stressor category.  As the age increased, the diagnosis with the higher number of cases changed over to depression  To increase the understanding and awareness of mental health, adding more variables into the data set and looking more at how socioeconomic conditions impact the type of diagnosis received. In terms of machine learning models, additional testing can be conducted, such as investigating precision and recall scores. Moreover, investigation into optimizing model parameters is warranted, such as number of features and identity of features, number of neighbors for KNN, number of epochs and layers for the keras multilabel classification model, in addition to researching other models.
+>>>>>>> 9531a29ea73a331d44c0515f7738c8197f660b58
 
 ## Future Research Opportunities
 Will trends change over the next few years due to covid-19?
