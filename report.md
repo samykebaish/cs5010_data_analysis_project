@@ -54,37 +54,6 @@ Finally, the merged Health Care Quality Measures data and merged MH-CLD data wer
 ## Exploratory Data Analysis
 With the data cleaned, relevant descriptive statistics and other trends could be identified in order to inform the visualizations and prediction models.
 ### MH-CLD
-#### Single Variable Analysis
-
-The MH-CLD data set consists of a large number of categorical variables corresponding to a specific state.  To understand the data, the first object was the look at the total number of entries per state, Figure X.  
-
-![Figure X](totalstates.png)
-
-The next part of the exploratory analysis was to sort through the guidebook provided by  SAMHA detailing the breakdown of the variables in the dataset. Age and mental health diagnosis have a high number of populated categories so these were the main areas of focus. 
-
-The first to explore is age. The variable is not an integer age, but a range of ages. The first goal is to get a visualization of each age group‘s total count, figure y. This shows that the 0-11 age group has a significant number of higher cases than the other age groups. 
-
-![Figure y](agetotals.png)
-
-With the dataset broken down into states, the data is then group into age groups by state, figure y. Again, the 0-11 age range has the highest number of cases in a majority of the states.
-
-![Figure z](agebystate.png)
-
-The same analysis was completed on the mental health diagnosis variable. The totals for each mental health diagnosis are shown in figure a. Depression has the highest number of cases in this dataset. 
-
-![Figure a](mh1total.png)
-
-The variable is then broken down by state, figure z, and the conclusion of which mental health diagnosis is the highest isn’t as clear as with the age analysis. The breakdown of the state mental health diagnosis is much more varied. 
-
-![Figure b](mh1state.png)
-	
-#### Multivariable Analysis
-	
-After looking at age and mental health diagnosis separately, how do these two variables relate to each other? In figure c, age ranges are grouped by their mental health diagnosis. From this, it is seen that the depressive mental health diagnosis is prominent in most of the age groups, with a higher instance after an individual is over the age of 15. 
-
-![Figure c](agemh1multi.png)
-
-There is a difference in diagnoses for individuals who are over 18 in relation to individuals under the age of 18. Individuals under the age of 18 have a much higher number of cases in the ADD/ADHD, Trauma/Stressors, and Oppositional Defiant Disorders categories. After the age of 18, there is an increase in depression, but it varies in the over 18 age groups, but each group remains higher individually than the under 18 age groups. 
 
 
 ### Adult and Child Health Care Quality Measures
