@@ -1,7 +1,7 @@
 # CS 5010 Semester Project: Mental Health
 
 Kelly Farell - knf7vg@virginia.edu
-Samy Kebaish - sak3qf@virginia.edu  
+Samy Kebaish - sak3qf@virginia.edu
 Gretchen Larrick - jem37b@virginia.edu
 
 GitHub Repository - https://github.com/samykebaish/cs5010_data_analysis_project
@@ -58,14 +58,14 @@ With the data cleaned, relevant descriptive statistics and other trends could be
 ### MH-CLD
 #### Single Variable Analysis
 
-The MH-CLD data set consists of a large number of categorical variables corresponding to a specific state.  To understand the data, the first object was the look at the total number of entries per state, Figure X.  
+The MH-CLD data set consists of a large number of categorical variables corresponding to a specific state.  To understand the data, the first object was the look at the total number of entries per state, Figure X.
 
 ![Figure X](totalstates.png)
 Figure X:  Mental Health Cases per State
 
-The next part of the exploratory analysis was to sort through the guidebook provided by  SAMHA detailing the breakdown of the variables in the dataset. Age and mental health diagnosis have a high number of populated categories so these were the main areas of focus. 
+The next part of the exploratory analysis was to sort through the guidebook provided by  SAMHA detailing the breakdown of the variables in the dataset. Age and mental health diagnosis have a high number of populated categories so these were the main areas of focus.
 
-The first to explore is age. The variable is not an integer age, but a range of ages. The first goal is to get a visualization of each age group‘s total count, figure y. This shows that the 0-11 age group has a significant number of higher cases than the other age groups. 
+The first to explore is age. The variable is not an integer age, but a range of ages. The first goal is to get a visualization of each age group‘s total count, figure y. This shows that the 0-11 age group has a significant number of higher cases than the other age groups.
 
 ![Figure y](agetotals.png)
 Figure Y:  Age Group Totals
@@ -75,12 +75,12 @@ With the dataset broken down into states, the data is then group into age groups
 ![Figure z](agebystate.png)
 Figure Z:  Age Group Totals by State
 
-The same analysis was completed on the mental health diagnosis variable. The totals for each mental health diagnosis are shown in figure a. Depression has the highest number of cases in this dataset. 
+The same analysis was completed on the mental health diagnosis variable. The totals for each mental health diagnosis are shown in figure a. Depression has the highest number of cases in this dataset.
 
 ![Figure a](mh1total.png)
 Figure A:  Mental Health Diagnosis Totals
 
-The variable is then broken down by state, figure z, and the conclusion of which mental health diagnosis is the highest isn’t as clear as with the age analysis. The breakdown of the state mental health diagnosis is much more varied. 
+The variable is then broken down by state, figure z, and the conclusion of which mental health diagnosis is the highest isn’t as clear as with the age analysis. The breakdown of the state mental health diagnosis is much more varied.
 
 ![Figure b](mh1state.png)
 Figure B:  Mental Health Diagnosis Totals by State
@@ -88,12 +88,12 @@ Figure B:  Mental Health Diagnosis Totals by State
 
 #### Multivariable Analysis
 
-After looking at age and mental health diagnosis separately, how do these two variables relate to each other? In figure c, age ranges are grouped by their mental health diagnosis. From this, it is seen that the depressive mental health diagnosis is prominent in most of the age groups, with a higher instance after an individual is over the age of 15. 
+After looking at age and mental health diagnosis separately, how do these two variables relate to each other? In figure c, age ranges are grouped by their mental health diagnosis. From this, it is seen that the depressive mental health diagnosis is prominent in most of the age groups, with a higher instance after an individual is over the age of 15.
 
 ![Figure b](agemh1multi.png)
 Figure B:  Age groups by Mental Health Diagnosis
 
-There is a difference in diagnoses for individuals who are over 18 in relation to individuals under the age of 18. Individuals under the age of 18 have a much higher number of cases in the ADD/ADHD, Trauma/Stressors, and Oppositional Defiant Disorders categories. After the age of 18, there is an increase in depression, but it varies in the over 18 age groups, but each group remains higher individually than the under 18 age groups. 
+There is a difference in diagnoses for individuals who are over 18 in relation to individuals under the age of 18. Individuals under the age of 18 have a much higher number of cases in the ADD/ADHD, Trauma/Stressors, and Oppositional Defiant Disorders categories. After the age of 18, there is an increase in depression, but it varies in the over 18 age groups, but each group remains higher individually than the under 18 age groups.
 
 ### Adult and Child Health Care Quality Measures
 Overall, the measures using the adult population had a higher percentage of nonmissing data than the child population. On the documentation for the original dataset, SAHMSA indicates that comparison of the child dataset with past years may not be fasible because some measures were only created or standardized in recent years. As a result of the changes, many states do not have sufficient data to be included in the analyses.
@@ -106,6 +106,8 @@ Choroleth 1: The percentage of adults who received a follow-up visit with an out
 
 ![choropleth1](assets/markdown-img-paste-20210508162327861.png)
 Choropleth 2: The percentage of adults who received a follow-up visit with an outpatient treatment provider after an emergency room visit for mental illness, by US state
+
+While follow-up visits with outpatient treatment providers are more likely to occur when a patient is discharging from the hospital, rather than after being screened out in the emergency room, states' performance on this measure had a range of about 35% to 80%.  
 
 ## General Linearized Model
 
