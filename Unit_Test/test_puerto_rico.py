@@ -4,7 +4,7 @@ from pandas._testing import assert_frame_equal
 
 
 #Function in the jupyter notebook that is being tested
-#this is tested inside the notebook for better accuracy, in this file due to 
+#this is tested inside the notebook for better visiblity, in this file due to 
 #project requirements. 
 def remove_puerto_rico(df):
     df = df[df['STATEFIP'] != 72]
