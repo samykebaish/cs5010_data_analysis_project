@@ -98,6 +98,8 @@ Figure B:  Age groups by Mental Health Diagnosis
 
 There is a difference in diagnoses for individuals who are over 18 in relation to individuals under the age of 18. Individuals under the age of 18 have a much higher number of cases in the ADD/ADHD, Trauma/Stressors, and Oppositional Defiant Disorders categories. After the age of 18, there is an increase in depression, but it varies in the over 18 age groups, but each group remains higher individually than the under 18 age groups.
 
+No prediction value was added by utilizing the poverty dataset. For that reason, we chose to eliminate it from future consideration in our models. The analyses showing no meaningful insights with the poverty data included can be seen in our code within the team's GitHub repository.
+
 ### Adult and Child Health Care Quality Measures
 Overall, the measures using the adult population had a higher percentage of nonmissing data than the child population. On the documentation for the original dataset, SAHMSA indicates that comparison of the child dataset with past years may not be fasible because some measures were only created or standardized in recent years. As a result of the changes, many states do not have sufficient data to be included in the analyses.
 
