@@ -121,8 +121,7 @@ A Principal Component Analysis was used to evaluate all variables in the combine
 ![fig3.png](assets/markdown-img-paste-20210508160836455.png)
 ![fig4.png](assets/markdown-img-paste-20210508160938792.png)
 ## Trend Analysis
-As data has been garnered since the year 2013 in a consistent fashion, we decided to conduct analyses on whether mental illness incidence has been increasing. To our surprise, the rates of mental illness have been fairly consistent throughout the years, and the diagnostic comparison between males and females followed a similar trend line amongst both groups. Moreover, disease distribution was also demonstrated to be consistent among years. For example, see Figure X for the distribution of mental health illnesses in 2016 as compared to 2018. However, in future studies, more extensive analysis is warranted. Namely, in our analysis, we did a deep dive into the dataset related to 2018. In order to present a truly robust representation, a similar level of depth would be necessary for each year (from 2013 onwards), which then can make comparisons more meaningful. 
-![2016_2018_histograms.png](assets/2016_2018_histograms.png)
+
 ## Above and Beyond: Advanced ML Methods and Interactive Website
 As part of our advanced analysis, we investigated the potential usage of machine learning algorithms towards uncovering trends related to various features and labels of our dataset. The labels we used included a mix of demographic, whereas the labels were based on multiple disorder diagnoses (Table X). The range of values for the labels and features were either binary (0 or 1), polyadic (e.g. -9, 1, 2, 3, 4) and continuous (0-100). Some of the features includes were age, education, ethnicity, race, substance abuse history, marital status, veteran status etc. The labels investigated included multiple disorders - such as major depressive disorder, ADHD, anxiety, schizophrenia - which were coded 0 for absence and 1 for presence thereof. Based on the structure of the data, we evaluated three separate machine learning models: Naive Bayes, K-Nearest Neighbors and a multilabel classification model using ADAM optimization. The NB and KNN classifiers were conducted using the scikit-learn library, whereas the multilabel classification model was derived from the keras library.
 ### Naive Bayes
@@ -141,7 +140,12 @@ The findings from the machine learning model revealed intuitive trends behind th
 A website complete with user-interactive visualizations was created to encourage engagement with the datasets and analyses. The choropleths show the raw percentages for the Health Care Quality measure performance of a given state when the user hovers their mouse over it. The interactive web-based application was built in Flask. Flask is a Python web framework which implements the Jinja template engine to serve HTML files and the Wekzeug WGSI toolkit. We used three data visualization libraries as samples on this website, including seaborn, plotly express (to generate choropleth maps) and bokeh. Regarding the latter, we imported historical data from the years of 2013-2018 to determine the frequency of primary, secondary and tertiary diagnoses over the years. Users could select the year from the dropdown menu, prompting the redraw function to create a plot based on the attributes.
 
 ## Unit Testing
-Testing was performed to  ...
+### MLH - CD Data Set
+
+The unit testing for this dataset was of a function that was written to remove Puerto Rico from the dataset. Below is a picture of the results. A data frame with and without Puerto Rico was created and tested using the function to remove Puerto Rico.
+
+
+
 ## Conclusions
 
 ## Future Research Opportunities
