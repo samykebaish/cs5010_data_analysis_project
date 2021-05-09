@@ -42,7 +42,7 @@ Plots related to the logistic regression and advanced ML modeling were created u
 
 Code for modeling was primarily written using Scikit (Pedregosa et al., 2011), Keras (Chollet et al., 2015), and _Flask (Grinberg, 2018). The website was hosted by AWS.
 
-![tech_stack.png](tech_stack.png)
+![tech_stack.png](assets/tech_stack.png)
 
 ## Preprocessing
 The datasets were carefully cleaned by the governmental and nongovernmental research agencies prior to publishing, so little preprocessing was required. However, null/missing values needed to be accounted for and the datasets needed to be merged together for some of the analyses.
