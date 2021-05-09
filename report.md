@@ -43,7 +43,7 @@ Plots related to the logistic regression and advanced ML modeling were created u
 Code for modeling was primarily written using Scikit (Pedregosa et al., 2011), Keras (Chollet et al., 2015), and _Flask (Grinberg, 2018). The website was hosted by AWS.
 
 ![tech_stack.png](assets/tech_stack.png)
-**Figure 1. Tech Stack: Front End and Back End Architecture
+**Figure 1. Tech Stack: Front End and Back End Architecture**
 
 ## Preprocessing
 The datasets were carefully cleaned by the governmental and nongovernmental research agencies prior to publishing, so little preprocessing was required. However, null/missing values needed to be accounted for and the datasets needed to be merged together for some of the analyses.
@@ -67,6 +67,7 @@ With the data cleaned, relevant descriptive statistics and other trends could be
 The MH-CLD data set consists of a large number of categorical variables corresponding to a specific state.  To understand the data, the first object was the look at the total number of entries per state, Figure 2.
 
 ![Figure 2](totalstates.png)
+
 **Figure 2:  Mental Health Cases per State**
 
 The next part of the exploratory analysis was to sort through the guidebook provided by  SAMHA detailing the breakdown of the variables in the dataset. Age and mental health diagnosis have a high number of populated categories so these were the main areas of focus.
@@ -74,22 +75,22 @@ The next part of the exploratory analysis was to sort through the guidebook prov
 The first to explore is age. The variable is not an integer age, but a range of ages. The first goal is to get a visualization of each age group‘s total count, figure 3. This shows that the 0-11 age group has a significant number of higher cases than the other age groups.
 
 ![Figure 3](agetotals.png)
-**Figure 3:  Age Group Totals
+**Figure 3:  Age Group Totals**
 
 With the dataset broken down into states, the data is then group into age groups by state, figure 4. Again, the 0-11 age range has the highest number of cases in a majority of the states.
 
 ![Figure 4](agebystate.png)
-**Figure 4:  Age Group Totals by State
+**Figure 4:  Age Group Totals by State**
 
 The same analysis was completed on the mental health diagnosis variable. The totals for each mental health diagnosis are shown in figure 5. Depression has the highest number of cases in this dataset.
 
 ![Figure 5](mh1total.png)
-**Figure 5:  Mental Health Diagnosis Totals
+**Figure 5:  Mental Health Diagnosis Totals**
 
 The variable is then broken down by state, figure 6, and the conclusion of which mental health diagnosis is the highest isn’t as clear as with the age analysis. The breakdown of the state mental health diagnosis is much more varied.
 
 ![Figure 6](mh1state.png)
-**Figure 6:  Mental Health Diagnosis Totals by State
+**Figure 6:  Mental Health Diagnosis Totals by State**
 
 
 #### Multivariable Analysis
@@ -107,13 +108,13 @@ No prediction value was added by utilizing the poverty dataset. For that reason,
 Overall, the measures using the adult population had a higher percentage of nonmissing data than the child population. On the documentation for the original dataset, SAHMSA indicates that comparison of the child dataset with past years may not be fasible because some measures were only created or standardized in recent years. As a result of the changes, many states do not have sufficient data to be included in the analyses.
 
 ![image replacement text.png](assets/markdown-img-paste-20210508154159182.png)
-**Figure 8: National Average Performance on Health Care Quality Measure (child population - right, adult population - left)
+**Figure 8: National Average Performance on Health Care Quality Measure (child population - right, adult population - left)**
 
 ![choropleth2](assets/markdown-img-paste-20210508162358255.png)
-**Choroleth 1: The percentage of adults who received a follow-up visit with an outpatient treatment provider after discharge from hospitalization for mental illness, by US state
+**Choroleth 1: The percentage of adults who received a follow-up visit with an outpatient treatment provider after discharge from hospitalization for mental illness, by US state**
 
 ![choropleth1](assets/markdown-img-paste-20210508162327861.png)
-**Choropleth 2: The percentage of adults who received a follow-up visit with an outpatient treatment provider after an emergency room visit for mental illness, by US state
+**Choropleth 2: The percentage of adults who received a follow-up visit with an outpatient treatment provider after an emergency room visit for mental illness, by US state**
 
 While follow-up visits with outpatient treatment providers are more likely to occur when a patient is discharging from the hospital, rather than after being screened out in the emergency room, states' performance on this measure had a range of about 35% to 80%.
 
