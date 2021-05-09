@@ -136,6 +136,7 @@ The three models differed in their properties and use cases. In the case of Naiv
 
 ### Multilabel Classification Optimization
 Keras is an intuitive deep learning API which acts as an interface for the Tensorflow Library. We implemented a Multilabel Classification using the ADAM optimization algorithm. The Adam optimization algorithm is used, as opposed to stochastic gradient descent, which stands for Adaptive Moment Estimation. Unlike stochastic gradients, which use single learning rates, the Adam algorithm implements both Adaptive Gradient Algorithm and Root Mean Square Propagation. These two mechanisms calculate an exponential moving average of the gradient and the squared gradient. As an example, we ran a Keras multi label classification model implementing initially 8 demographic variables (features) and 10 mental health diagnoses (labels). The initial accuracy was only 36%, demonstrating the low impact of demographic variables in ascertaining mental health (for this dataset). However, after adding information about veteran status, substance abuse, homelessness, admissions to hospital and other clinical features (18 total), the maximum accuracy was 76.2%. Ultimately, accuracy scores were similar for KNN and multilabel classification, although multilabel classification had a lower sensitivity. 
+![keras.png](assets/keras.png)
 
 ### Findings
 
