@@ -27,4 +27,30 @@ class PuertoRicoTestCase(unittest.TestCase): # inherit from unittest.TestCase
                 
             
 if __name__ == '__main__':
-    unittest.main()            
+    unittest.main()
+
+#Testing datatypes
+def coltypes(self): #function is also in Jupyter notebook
+    categories = ['YEAR', 'EDUC', 'ETHNIC', 'RACE', 'GENDER', 'SPHSERVICE',
+       'CMPSERVICE', 'OPISERVICE', 'RTCSERVICE', 'IJSSERVICE', 'MH1', 'MH2',
+       'MH3', 'SUB', 'MARSTAT', 'SMISED', 'SAP', 'EMPLOY', 'DETNLF', 'VETERAN',
+       'LIVARAG', 'NUMMHS', 'TRAUSTREFLG', 'ANXIETYFLG', 'ADHDFLG',
+       'CONDUCTFLG', 'DELIRDEMFLG', 'BIPOLARFLG', 'DEPRESSFLG', 'ODDFLG',
+       'PDDFLG', 'PERSONFLG', 'SCHIZOFLG', 'ALCSUBFLG', 'OTHERDISFLG',
+       'STATEFIP', 'DIVISION', 'REGION', 'CASEID', 'AGEFLAG'] #list of the columns that have categorial data
+    cld[categories] = cld[categories].astype('category') #casting the categorical columns
+
+class coltypestestcase(unittest.TestCase): #Setting up test case
+    def test_coltypes(self): #Initializing
+        categories = ['YEAR', 'EDUC', 'ETHNIC', 'RACE', 'GENDER', 'SPHSERVICE',
+       'CMPSERVICE', 'OPISERVICE', 'RTCSERVICE', 'IJSSERVICE', 'MH1', 'MH2',
+       'MH3', 'SUB', 'MARSTAT', 'SMISED', 'SAP', 'EMPLOY', 'DETNLF', 'VETERAN',
+       'LIVARAG', 'NUMMHS', 'TRAUSTREFLG', 'ANXIETYFLG', 'ADHDFLG',
+       'CONDUCTFLG', 'DELIRDEMFLG', 'BIPOLARFLG', 'DEPRESSFLG', 'ODDFLG',
+       'PDDFLG', 'PERSONFLG', 'SCHIZOFLG', 'ALCSUBFLG', 'OTHERDISFLG',
+       'STATEFIP', 'DIVISION', 'REGION', 'CASEID', 'AGEFLAG'] #list of the columns that have categorial data
+        cld[categories] = cld[categories].astype('category') #casting as categorical dtype
+        self.assertEqual(cld['YEAR'].dtypes, 'category') #testing one of my categories columns
+
+if __name__ == '__main__':
+    unittest.main(argv=['first-arg-is-ignored'], exit=False)
