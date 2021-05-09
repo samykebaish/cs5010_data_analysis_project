@@ -128,13 +128,14 @@ While follow-up visits with outpatient treatment providers are more likely to oc
 A Principal Component Analysis was used to evaluate all variables in the combined CLD-Health Care Quality Measures dataset.
 ![fig9.png](assets/markdown-img-paste-20210508161115359.png)
 
-**Figure 9. PCA CLD Health Care Quality Measures
-
 ![fig10.png](assets/markdown-img-paste-20210508160144910.png)
+**Figure 9. PCA CLD Health Care Quality Measures**
 
 ### Logistic Regression
 ![fig3.png](assets/markdown-img-paste-20210508160836455.png)
 ![fig4.png](assets/markdown-img-paste-20210508160938792.png)
+**Figure 10. Logistic Regression Analysis**
+
 ## Trend Analysis
 As data has been garnered since the year 2013 in a consistent fashion, we decided to conduct analyses on whether mental illness incidence has been increasing. To our surprise, the rates of mental illness have been fairly consistent throughout the years, and the diagnostic comparison between males and females followed a similar trend line amongst both groups. Moreover, disease distribution was also demonstrated to be consistent among years. For example, see Figure X for the distribution of mental health illnesses in 2016 as compared to 2018. However, in future studies, more extensive analysis is warranted. Namely, in our analysis, we did a deep dive into the dataset related to 2018. In order to present a truly robust representation, a similar level of depth would be necessary for each year (from 2013 onwards), which then can make comparisons more meaningful.
 ![2016_2018_histograms.png](assets/2016_2018_histograms.png)
