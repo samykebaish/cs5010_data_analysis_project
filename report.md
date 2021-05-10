@@ -114,12 +114,14 @@ Overall, the measures using the adult population had a higher percentage of nonm
 We chose to analyze follow-up visit information--specifically, outpatient follow-up appointments provided within 30 days after discharge from a hospitalization for mental illness. In order to be hospitalized for mental illness, a person needs to be evaluated by medical professionals (most commonly at an emergency department) and determined to be at an acute risk of harm to themselves or others. This indicates a lot of distress and impact on an individual's life, so outpatient care is needed to help support them as they return to daily life. This variable was chosen because it is one of the few measurements that can apply to any individual who is hospitalized--it is not specific to any diagnosis. We also looked at outpatient follow-up appointments provided within 30 days after an emergency room visit (which did not result in a hospitalization).
 
 ![image replacement text.png](assets/markdown-img-paste-20210508154159182.png)
+
 **Figure 8: National Average Performance on Health Care Quality Measure (child population - right, adult population - left)**
 
 ![choropleth2](assets/markdown-img-paste-20210508162358255.png)
 **Choroleth 1: The percentage of adults who received a follow-up visit with an outpatient treatment provider after discharge from hospitalization for mental illness, by US state**
 
 ![choropleth1](assets/markdown-img-paste-20210508162327861.png)
+
 **Choropleth 2: The percentage of adults who received a follow-up visit with an outpatient treatment provider after an emergency room visit for mental illness, by US state**
 
 While follow-up visits with outpatient treatment providers are more likely to occur when a patient is discharging from the hospital, rather than after being screened out in the emergency room, states' performance on this measure had a range of about 35% to 80%.
@@ -133,16 +135,20 @@ A Principal Component Analysis was used to evaluate all variables in the combine
 ![fig9.png](assets/markdown-img-paste-20210508161115359.png)
 
 ![fig10.png](assets/markdown-img-paste-20210508160144910.png)
+
 **Figure 9. PCA CLD Health Care Quality Measures**
 
 ### Logistic Regression
 ![fig3.png](assets/markdown-img-paste-20210508160836455.png)
 ![fig4.png](assets/markdown-img-paste-20210508160938792.png)
+
 **Figure 10. Logistic Regression Analysis**
 
 ## Trend Analysis
 As data has been garnered since the year 2013 in a consistent fashion, we decided to conduct analyses on whether mental illness incidence has been increasing. To our surprise, the rates of mental illness have been fairly consistent throughout the years, and the diagnostic comparison between males and females followed a similar trend line amongst both groups. Moreover, disease distribution was also demonstrated to be consistent among years. For example, see Figure X for the distribution of mental health illnesses in 2016 as compared to 2018. However, in future studies, more extensive analysis is warranted. Namely, in our analysis, we did a deep dive into the dataset related to 2018. In order to present a truly robust representation, a similar level of depth would be necessary for each year (from 2013 onwards), which then can make comparisons more meaningful.
+
 ![2016_2018_histograms.png](assets/2016_2018_histograms.png)
+
 ## Above and Beyond: Advanced ML Methods and Interactive Website
 As part of our advanced analysis, we investigated the potential usage of machine learning algorithms towards uncovering trends related to various features and labels of our dataset. The labels we used included a mix of demographic, whereas the labels were based on multiple disorder diagnoses (Table X). The range of values for the labels and features were either binary (0 or 1), polyadic (e.g. -9, 1, 2, 3, 4) and continuous (0-100). Some of the features includes were age, education, ethnicity, race, substance abuse history, marital status, veteran status etc. The labels investigated included multiple disorders - such as major depressive disorder, ADHD, anxiety, schizophrenia - which were coded 0 for absence and 1 for presence thereof. Based on the structure of the data, we evaluated three separate machine learning models: Naive Bayes, K-Nearest Neighbors and a multilabel classification model using ADAM optimization. The NB and KNN classifiers were conducted using the scikit-learn library, whereas the multilabel classification model was derived from the keras library.
 ### Naive Bayes
@@ -150,6 +156,7 @@ The three models differed in their properties and use cases. In the case of Naiv
 ![gaussian_nb.png](assets/gaussian_nb.png)
 ### k-Nearest Neighbors & Multilabel Classification Optimization
 K Nearest Neighbors is an algorithm which assumes that similar data points are close to or “neighbor” one another. It can be used to solve classification and regression problems. We used a KNN classifier due to its ability to handle multi feature, multilabel data. Additional, we use keras for similar, albeit more robust, multifeature, multilabel classification. Keras is an intuitive deep learning API which acts as an interface for the Tensorflow Library. We implemented a Multilabel Classification using the ADAM optimization algorithm. The Adam optimization algorithm is used, as opposed to stochastic gradient descent, which stands for Adaptive Moment Estimation. Unlike stochastic gradients, which use single learning rates, the Adam algorithm implements both Adaptive Gradient Algorithm and Root Mean Square Propagation. These two mechanisms calculate an exponential moving average of the gradient and the squared gradient. As an example, we ran a Keras multi label classification model implementing initially 8 demographic variables (features) and 10 mental health diagnoses (labels) for the following representation: A 40-44 year old, High School Educated, Hispanic (other than Mexico or Puerto Rico), White in Ethnicity, Female, from California, who is divorced. The initial accuracy was only 36%, demonstrating the low impact of demographic variables in ascertaining mental health (for this dataset). However, after adding information about veteran status, substance abuse, homelessness, admissions to hospital and other clinical features (18 total), the maximum accuracy was 76.2%. Ultimately, accuracy scores were similar for KNN and multilabel classification, although multilabel classification had a lower sensitivity.
+
 ![keras.png](assets/keras.png)
 
 ### Findings
