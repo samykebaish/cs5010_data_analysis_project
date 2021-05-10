@@ -9,6 +9,8 @@ Mental health impacts everyone on an individual level, but it can be hard to vis
 
 Our client level data can be found here: https://csprojectdatavisualization.s3.us-east-2.amazonaws.com/MHCLD_PUF_2018.csv
 
+The code file for this project is found here:  https://github.com/samykebaish/cs5010_data_analysis_project/blob/main/Project_Code_Group10.ipynb
+
 Note: As the dataset is quite large and places a high demand on RAM, we suggest using Colab Pro to run the notebooks or you can feel free to use these 50,000 patient random sample generated from the 2018 client level dataset. 
 
 
