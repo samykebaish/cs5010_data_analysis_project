@@ -11,5 +11,4 @@ Our client level data can be found here: https://csprojectdatavisualization.s3.u
 
 Note: As the dataset is quite large and places a high demand on RAM, we suggest using Colab Pro to run the notebooks or you can feel free to use these 50,000 patient random sample generated from the 2018 client level dataset. 
 
-## Notebook description
 
