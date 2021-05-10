@@ -149,7 +149,7 @@ As data has been garnered since the year 2013 in a consistent fashion, we decide
 
 ![2016_2018_histograms.png](assets/2016_2018_histograms.png)
 
-**Figure 11. MH1 Histogram Comparison: 2016 vs 2018 **
+**Figure 11. MH1 Histogram Comparison: 2016 vs 2018**
 
 ## Above and Beyond: Advanced ML Methods and Interactive Website
 As part of our advanced analysis, we investigated the potential usage of machine learning algorithms towards uncovering trends related to various features and labels of our dataset. The labels we used included a mix of demographic, whereas the labels were based on multiple disorder diagnoses (Table X). The range of values for the labels and features were either binary (0 or 1), polyadic (e.g. -9, 1, 2, 3, 4) and continuous (0-100). Some of the features includes were age, education, ethnicity, race, substance abuse history, marital status, veteran status etc. The labels investigated included multiple disorders - such as major depressive disorder, ADHD, anxiety, schizophrenia - which were coded 0 for absence and 1 for presence thereof. Based on the structure of the data, we evaluated three separate machine learning models: Naive Bayes, K-Nearest Neighbors and a multilabel classification model using ADAM optimization. The NB and KNN classifiers were conducted using the scikit-learn library, whereas the multilabel classification model was derived from the keras library.
